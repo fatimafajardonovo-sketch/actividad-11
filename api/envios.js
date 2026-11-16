@@ -19,12 +19,11 @@ export default async function handler(req,res) {
                 filtro.estado = estado;
             }
             // ciudad usa $regex para buscar texto dentro de ciudadDestino; $options: "i" ignora mayúsculas y minúsculas
-            // escapeRegex evita que caracteres especiales de la entrada se interpreten como parte de una expresión regular.
             if (ciudad !== undefined) {
                 if (typeof ciudad !== "string") {
                 return res.status(400).json({ error: "El parámetro ciudad debe ser un texto." }); }
                 filtro.ciudadDestino = {
-                $regex: escapeRegex(ciudad),
+                $regex: ciudad,
                 $options: "i" };
             }
             // añade $exists: false, que selecciona envíos en los que el campo repartidor no está guardado
