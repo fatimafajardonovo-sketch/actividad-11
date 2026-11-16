@@ -60,6 +60,53 @@ async function ejecutarCRUD() {
         estado: 'En Almacén',
         prioridad: 'Urgente',
         notasRuta: ['fragil', 'asegurado']
+      },
+      {
+        trackingCode: 'ENV-9006',
+        destinatario: 'Sofía Ruiz',
+        ciudadDestino: 'Sevilla',
+        estado: 'En Reparto',
+        prioridad: 'Express',
+        repartidor: 'Marta Gómez',
+        intentosEntrega: 2,
+        notasRuta: ['llamar-antes', 'portero']
+      },
+      {
+        trackingCode: 'ENV-9007',
+        destinatario: 'Diego Navarro',
+        ciudadDestino: 'Bilbao',
+        estado: 'Entregado',
+        prioridad: 'Estándar',
+        repartidor: 'Álvaro Díaz',
+        intentosEntrega: 1,
+        notasRuta: ['asegurado']
+      },
+      {
+        trackingCode: 'ENV-9008',
+        destinatario: 'Lucía Romero',
+        ciudadDestino: 'Zaragoza',
+        estado: 'Incidencia',
+        prioridad: 'Urgente',
+        intentosEntrega: 3,
+        notasRuta: ['dirección-incompleta']
+      },
+      {
+        trackingCode: 'ENV-9009',
+        destinatario: 'Pablo Jiménez',
+        ciudadDestino: 'Málaga',
+        estado: 'En Almacén',
+        prioridad: 'Estándar',
+        notasRuta: ['fragil']
+      },
+      {
+        trackingCode: 'ENV-9010',
+        destinatario: 'Elena Castro',
+        ciudadDestino: 'Alicante',
+        estado: 'En Reparto',
+        prioridad: 'Urgente',
+        repartidor: 'Nuria León',
+        intentosEntrega: 0,
+        notasRuta: ['entrega-mañana']
       }
     ]);
 
