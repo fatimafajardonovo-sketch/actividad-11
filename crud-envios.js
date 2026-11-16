@@ -1,6 +1,5 @@
 import mongoose from "mongoose"; //Importamos la bbdd de mongoose
 import dotenv from "dotenv"; // dotenv carga las variales de entornos desde el archivo dotenv
-import Ticket from "../models/envio.js"; //importamos el modelo definido en tickets.js, qe se llama Tickets
 import Envio from "./models/Envio.js";
 
 dotenv.config(); 
@@ -17,7 +16,7 @@ async function ejecutarCRUD() {
     // FASE 1: Envíos iniciales
     console.log("---1. Fase Create: Inserta los envíos iniciales")
 
-    const enviosniciales =await Envio.insertMany([
+    const enviosIniciales = await Envio.insertMany([
       {
         trackingCode: 'ENV-9001',
         destinatario: 'Carlos García',
@@ -64,7 +63,7 @@ async function ejecutarCRUD() {
       }
     ]);
 
-    console.log(`Se crearon ${Envio.length} tickets\n`);
+    console.log(`Se crearon ${enviosIniciales.length} envíos\n`);
 
     // FASE 2: READ: consulta envíos con distintos operadores de MongoDB
     console.log("---2. Fase Read: Consultas con operadores");

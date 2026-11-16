@@ -11,6 +11,8 @@
   "license": "ISC",
   "type": "module",
   "dependencies": {
-    "mongodb": "^7.9.0"
+    "dotenv": "^16.4.7",
+    "mongodb": "^7.9.0",
+    "mongoose": "^8.12.1"
   }
 }

@@ -59,6 +59,6 @@ const envioSchema = new mongoose.Schema (
 );
 
 
-const Ticket = mongoose.models.Ticket || mongoose.model ("Envio", envioSchema)
+const Envio = mongoose.models.Envio || mongoose.model("Envio", envioSchema);
 
 export default Envio;
