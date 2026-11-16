@@ -42,6 +42,25 @@ export default async function handler(req,res) {
             const envios = await Envio.find(filtro).sort({ createdAt: -1 });
             return res.status(200).json({ total: envios.length, datos: envios });
     }
+    
+    // POST: crea un envío nuevo con los datos del cuerpo JSON;  comprobamos que req.body sea un objeto JSON válido
+    if (method === "POST") {
+      if (!isObject(req.body)) {
+        return res.status(400).json({ error: "El cuerpo debe ser un objeto JSON." });
+      }
+      //  guarda los datos recibidos en MongoDB y espera a que termine. El documento creado queda guardado en
+      const nuevoEnvio = await Envio.create(req.body);
+      //  esponde que la creación fue exitosa (201 Created) y devuelve un JSON con un mensaje y el documento creado
+      return res.status(201).json({
+        mensaje: "Envío creado con éxito.",
+        envio: nuevoEnvio
+      });
+    }
+
+    
+
+
+
 
     // Si el método no coincide con GET, POST o PATCH, la respuesta no admite esa operación
     res.setHeader("Allow", ["GET", "POST", "PATCH", "DELETE"]);
