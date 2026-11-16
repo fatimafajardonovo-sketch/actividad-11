@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import Envio from "../models/Envio.js";
+import Envio from "../models/envio.js";
 
 export default async function handler(req,res) {
     try {

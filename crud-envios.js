@@ -1,6 +1,6 @@
 import mongoose from "mongoose"; //Importamos la bbdd de mongoose
 import dotenv from "dotenv"; // dotenv carga las variales de entornos desde el archivo dotenv
-import Envio from "./models/Envio.js";
+import Envio from "./models/envio.js";
 
 dotenv.config(); 
 
